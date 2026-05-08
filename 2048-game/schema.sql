@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS scores (
+  id INTEGER PRIMARY KEY,
+  score INTEGER NOT NULL,
+  updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 初始化一条默认记录（如果表为空）
+INSERT OR IGNORE INTO scores (id, score) VALUES (1, 0);
